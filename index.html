@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Box</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<style>
+
+body{
+	width: 80%;
+	margin:0 auto;
+}
+
+p{
+ 	padding-top: 1.2em;
+ 	color: white;
+}
+
+.col-xs-4{
+	height: 300px;
+	background-color: #ffccf2;
+	border: solid white 3px;
+	text-align: center;
+	font-size: 5em;
+}
+
+.kaboom{
+	background-color:lightblue;
+}
+
+.yo{
+	background-image:url(images/cuz.jpg);
+}
+
+
+</style>
+
+</head>
+<body>
+
+	<div class="row">
+		<div id="aBox" class="col-xs-4">
+			<p>A</p>
+		</div>
+		<div id="bBox" class="col-xs-4">
+			<p>B</p>
+		</div>
+		<div id="cBox" class="col-xs-4">
+			<p>C</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-4">
+			<p>D</p>
+		</div>
+		<div id="eBox" class="col-xs-4">
+			<p>E</p>
+		</div>
+		<div class="col-xs-4">
+			<p>F</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-4">
+			<p>G</p>
+		</div>
+		<div class="col-xs-4">
+			<p>H</p>
+		</div>
+		<div class="col-xs-4">
+			<p>I</p>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script>
+		//custom javascript here
+		$(document).ready(function(){
+
+			// Step A
+			 $("#aBox").hide(3000, function(){
+			 //	alert("Box is gone");
+			 });
+
+			//Second click EVENT type function
+			$("#bBox").click(function(){
+				$(this).fadeOut(1000);
+			});
+
+			//third event type function
+			$("#cBox").hover(function(){
+					$(this).addClass("yo");
+			});
+
+
+
+			$("#eBox").hover(
+				//This is for the hover on event
+				function(){
+					//other stuff
+					$(this).addClass("kaboom");
+					console.log("a");
+				},
+				//this is for the hover off event
+				function(){
+					$(this).removeClass("kaboom");
+					console.log("b");
+			});
+
+		});
+
+		</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
